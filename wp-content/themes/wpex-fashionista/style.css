@@ -70,6 +70,33 @@ address{letter-spacing: 1px; margin: 20px 0 }
 .entry .entry-video { margin-bottom: 20px; }
 .wpb_video_widget .responsive-video-wrap { padding-top: 0; padding-bottom: 0; }
 
+/*webfonts*/
+@font-face {
+  font-family: 'Stag Web';
+  src: url('fonts/Stag-Bold-Web.eot');
+  src: url('fonts/Stag-Bold-Web.eot?#iefix') format('embedded-opentype'),
+     url('fonts/Stag-Bold-Web.woff') format('woff'),
+     url('fonts/Stag-Bold-Web.ttf') format('truetype'),
+     url('fonts/Stag-Bold-Web.svg#Stag Web') format('svg');
+	  font-weight:  700;
+	  font-style:   normal;
+	  font-stretch: normal;
+	}
+
+.Stag-Bold-Web {
+  font-family: 'Stag Web';
+  font-weight:  700;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+@font-face{
+	font-family: 'Oswald';
+	src: url('fonts/Oswald-Regular.ttf') format('truetype');
+	font-weight:  400;
+	font-style:   normal;
+	font-stretch: normal;
+}
 
 /* Body & Main
 ================================================== */
@@ -153,7 +180,7 @@ ul ul li, ul ol li, ol ol li, ol ul li { margin-bottom: 6px }
 #page-heading h1 span, #page-heading h2 span{ background: #fff; padding: 5px 25px; }
 
 #single-heading{ position: relative; padding-bottom: 10px; margin-bottom: 15px; /*background: url("images/dots.png") left bottom repeat-x*/; }
-#single-heading h1 { font-size: 45px; line-height: 1.2em; margin: 0px; font-weight: 600; text-transform: none;}
+#single-heading h1 { font-size: 45px; line-height: 1.2em; margin: 0px; font-family: 'Stag Web'; font-weight: 700; font-style: normal; font-stretch: normal;; text-transform: none;}
 
 #related-heading { margin: 60px 0 40px; text-align: center; }
 #related-heading h4 { font-size: 21px; line-height: 1.2em; margin: 0px; padding: 0 40px; background: url("images/dots-dark.png") repeat; font-weight: 300; }
@@ -224,7 +251,7 @@ ul.sf-menu li li:hover ul, ul.sf-menu li li.sfHover ul { left: 190px; top: 0px }
 .entry-top { margin-bottom: 20px; }
 .loop-entry { position: relative; display: block; width: 320px; float: left; /*margin-right: 20px;*/ margin-bottom: 20px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; border: 1px solid transparent; font-size: 12px; overflow: hidden; -webkit-transition-property: border;-moz-transition-property: border;-ms-transition-property: border;-o-transition-property: border;transition-property: border;-webkit-transition-duration: 0.25s;-moz-transition-duration: 0.25s;-ms-transition-duration: 0.25s;-o-transition-duration: 0.25s;transition-duration: 0.25s; }
 .loop-entry:hover{ border:1px solid #bbb; }
-.loop-entry h2 { margin: 0 0 5px; font-size: 20px; line-height: 1.6em; font-weight: 600; text-transform: uppercase; text-align: left; }
+.loop-entry h2 { margin: 0 0 5px; font-size: 20px; line-height: 1.6em; text-transform: uppercase; text-align: left; font-family: 'Stag Web'; font-weight: 700; font-style: normal; font-stretch: normal; }
 .loop-entry p:last-child{ margin: 0; }
 
 .loop-entry-img-link{ display: block; width: 100%; margin: 0 0 20px; position: relative; }
@@ -848,7 +875,7 @@ html[xmlns] .slides {display: block;}
 .show-in-small .logo{padding: 10px 0px; display: block;}
 .hide-in-small .logo {padding: 8px 0px 0px 0px; display: block;}
 #search-wrapper {padding: 10px 0px; float: left; width: 78%;}
-#search-wrapper span {color:#FFFFFF; text-transform: uppercase;margin-right: 30px; font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;}
+#search-wrapper span {color:#FFFFFF; text-transform: uppercase;margin-right: 30px; font-family: 'Oswald';}
 #search-wrapper input {display: inline-block;font-size: 14px;font-weight: 500;padding: 18px 10px; width: 70%;}
 
 .fullwidth {max-width: 1280px;}
@@ -865,17 +892,17 @@ html[xmlns] .slides {display: block;}
 .single #post .container {padding: 0px 15px 15px 15px;}
 
 .post-meta .meta-single-date,
-.post-meta .meta-single-cat{ font-family: Arial, Helvetica, sans-serif; color: #000000; font-weight: 700;}
+.post-meta .meta-single-cat{ font-family: 'Oswald'; color: #000000; font-weight: 700;}
 .post-meta .meta-single-cat a {color: #000000;}
 .post-meta .meta-single-user {font-weight: 700; margin-top: 12px; color: #ed4555; font-style: italic;}
 #post article {font-size:14px;}
 
 .loop-entry .post-categories {display: inline-block;}
 .loop-entry .dbl-arrow {color: #000000; font-size: 15px;}
-.loop-entry .post-categories a {color: #000000; text-transform: uppercase; font-size: 14px;}
+.loop-entry .post-categories a {color: #000000; text-transform: uppercase; font-size: 14px; font-family: 'Oswald'}
 
 .yarpp-related {width: 100%; overflow: hidden;}
 .yarpp-related h3 {text-transform: uppercase;}
 .yarpp-related ul {margin-top: 20px;}
 .yarpp-related ul li {width: 300px; margin: 0px 15px 15px 0px; display: inline-block; vertical-align: top;}
-.yarpp-related ul li h6{margin: 7px 0px; font-size: 20px; line-height: 26px;}
+.yarpp-related ul li h6{margin: 7px 0px; font-size: 20px; line-height: 26px;font-family: 'Stag Web'; font-weight: 700; font-style: normal; font-stretch: normal;}
