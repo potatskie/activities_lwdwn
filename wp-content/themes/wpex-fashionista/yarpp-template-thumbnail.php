@@ -19,5 +19,5 @@ Author: mitcho (Michael Yoshitaka Erlewine)
 </ul>
 
 <?php else: ?>
-<p>No related photos.</p>
+<p>No related articles.</p>
 <?php endif; ?>
