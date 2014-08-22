@@ -180,7 +180,7 @@ ul ul li, ul ol li, ol ol li, ol ul li { margin-bottom: 6px }
 #page-heading h1 span, #page-heading h2 span{ background: #fff; padding: 5px 25px; }
 
 #single-heading{ position: relative; padding-bottom: 10px; margin-bottom: 15px; /*background: url("images/dots.png") left bottom repeat-x*/; }
-#single-heading h1 { font-size: 45px; line-height: 1.2em; margin: 0px; font-family: 'Stag Web'; font-weight: 700; font-style: normal; font-stretch: normal;; text-transform: none;}
+#single-heading h1 { font-size: 40px; line-height: 1.2em; margin: 0px; font-family: Georgia, serif; font-weight: 400; font-style: normal; font-stretch: normal;; text-transform: none;}
 
 #related-heading { margin: 60px 0 40px; text-align: center; }
 #related-heading h4 { font-size: 21px; line-height: 1.2em; margin: 0px; padding: 0 40px; background: url("images/dots-dark.png") repeat; font-weight: 300; }
@@ -888,8 +888,18 @@ html[xmlns] .slides {display: block;}
 #header .hide-in-small {float: right;}
 
 .single .post-container {margin: 0 auto;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
-.single #main-content { padding: 0px 20px 20px 20px;}
-.single #post .container {padding: 0px 15px 15px 15px;}
+.single #main-content { padding: 0px;}
+.single #main-content.outerbox{width: 100%;}
+.single #post .container {padding: 0px;}
+.single #post .container #single-media-wrap{position: relative;}
+.single #post .container #single-media-wrap img {width: 100%;}
+.single #post .container #single-media-wrap .meta-overlay{position: absolute; bottom: 20px; text-align: left; padding-left: 50px;}
+.single #post .container #single-media-wrap .meta-overlay h1{font-size: 45px; line-height: 1.2em; margin: 0px; font-family: 'Stag Web';	font-weight: 700; font-style: normal; text-transform: none; }
+.single #post .container #single-media-wrap .meta-overlay span,
+.single #post .container #single-media-wrap .meta-overlay ul {display: inline-block; font-family: 'Oswald'; font-size: 20px;}
+.single #post .container #single-media-wrap .meta-overlay ul li a {color: #000000;}
+.single #post .container .text-content-wrapper {padding: 20px 50px;}
+
 
 .post-meta .meta-single-date,
 .post-meta .meta-single-cat{ font-family: 'Oswald'; color: #000000; font-weight: 700;}
@@ -901,8 +911,8 @@ html[xmlns] .slides {display: block;}
 .loop-entry .dbl-arrow {color: #000000; font-size: 15px;}
 .loop-entry .post-categories a {color: #000000; text-transform: uppercase; font-size: 14px; font-family: 'Oswald'}
 
-.yarpp-related {width: 100%; overflow: hidden;}
-.yarpp-related h3 {text-transform: uppercase;}
+.yarpp-related {overflow: hidden; padding: 0px 50px;}
+.yarpp-related h3 {text-transform: uppercase; font-family: 'Oswald';}
 .yarpp-related ul {margin-top: 20px;}
 .yarpp-related ul li {width: 300px; margin: 0px 15px 15px 0px; display: inline-block; vertical-align: top;}
 .yarpp-related ul li h6{margin: 7px 0px; font-size: 20px; line-height: 26px;font-family: 'Stag Web'; font-weight: 700; font-style: normal; font-stretch: normal;}

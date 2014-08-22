@@ -34,31 +34,33 @@ while (have_posts()) : the_post(); ?>
 		<?php } else { ?>
 		<div id="single-media-wrap">
 			<?php get_template_part( '/formats/single', $format ); ?>
+			<div class="meta-overlay">
+				<h1><?php the_title(); ?></h1>
+				<span>&raquo;</span> <?php the_category(); ?>
+			</div>
 		</div><!-- /single-media-wrap -->
 		
-		<header id="single-heading">
-			<h1><?php the_title(); ?></h1>
-		</header><!-- /single-meta -->
-
-		<div class="post-meta">
-			<?php wpex_post_meta(); ?>
-			<div class="hide-in-small">
+		<div class="text-content-wrapper">
+			<header id="single-heading">
+				<h1><?php the_excerpt(); ?></h1>
+			</header>
+			<div class="post-meta">
+				<?php wpex_post_meta(); ?>
+				<div class="hide-in-small">
+					<?php wpex_social_share(); ?>
+				</div>
+			</div>
+			
+			<article class="entry clearfix">
+				<?php the_content(); ?>
+			</article><!-- /entry -->
+			
+			<?php wp_link_pages(' '); ?>
+			
+			<div class="show-in-small clearfix">
 				<?php wpex_social_share(); ?>
 			</div>
 		</div>
-		
-		<article class="entry clearfix">
-			<?php the_content(); ?>
-		</article><!-- /entry -->
-		
-		<?php wp_link_pages(' '); ?>
-		
-		<div class="show-in-small clearfix">
-			<?php wpex_social_share(); ?>
-		</div>
-		
-
-		
 	<?php } ?>
 		
 	</div><!-- /container -->
