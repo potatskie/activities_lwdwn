@@ -198,3 +198,15 @@ if ( ! function_exists( 'wpex_embed_oembed_html' ) ) {
 	}
 }
 add_filter( 'embed_oembed_html', 'wpex_embed_oembed_html', 99, 4 );
+
+function category_filter_array(){
+	$slugs_arr = array('day-trips', 'my-favourite-things', 'walking-tours');
+
+	$category_array = array();
+	foreach ($slugs_arr as $slug) {
+		$category = get_category_by_slug($slug);
+		$category_array[$slug]['title'] = $category->cat_name;
+		$category_array[$slug]['link'] = get_category_link($category->term_id);
+	}
+	return $category_array;
+}
