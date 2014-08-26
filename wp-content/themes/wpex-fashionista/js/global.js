@@ -1,3 +1,4 @@
+current_filters = ['category-all'];
 (function($) {
 	"use strict";
 
@@ -75,6 +76,44 @@
 					});
 				}
 			});
+		});
+
+		
+		$('.category-filters').click(function(e){
+			e.preventDefault();
+			var slug = $(this).data('slug');
+
+			if(slug !== 'category-all'){
+				$(this).parent().toggleClass('selected');
+
+				$('.single').parent().removeClass('selected');
+				if(current_filters.indexOf('category-all') !== -1){
+					current_filters.splice(current_filters.indexOf('category-all'), 1);
+				}
+
+				if($(this).parent().hasClass('selected')){
+					current_filters.push(slug);
+				}
+				else{
+					current_filters.splice(current_filters.indexOf(slug), 1);
+				}
+			}
+			else{
+				$('.compound').parent().removeClass('selected');
+				$(this).parent().addClass('selected');
+				current_filters = [slug];
+			}
+
+			var filter = ''
+			if(current_filters.indexOf('category-all') === -1){
+				filter = '';
+				$.each(current_filters, function(index, value){
+					filter += (filter) ? ', .' + value : '.' + value;
+				});
+			}
+
+			var $container = $('#wpex-grid-wrap');
+			$container.isotope({filter: filter});
 		});
 
 	});

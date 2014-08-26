@@ -7,8 +7,15 @@
 
 wpex_hook_entry_before(); ?>
 <?php
+
 	global $is_featured; 
 	$post_class = ($is_featured) ? 'loop-entry container featured-entry' : 'loop-entry container';
+
+	$thisweekpost = true;
+	$thisweekpost = $thisweekpost && (date('W') == get_the_date('W'));
+	$thisweekpost = $thisweekpost && (date('Y') == get_the_date('Y'));
+
+	$post_class .= ($thisweekpost) ? ' category-this-week' : '';
 ?>
 <article <?php post_class($post_class); ?>>
 	<?php wpex_hook_entry_top(); ?>

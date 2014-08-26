@@ -15,19 +15,19 @@ if( of_get_option( 'sidebar_homepage_archive' ) == '1' ) echo '<div id="post" cl
             <?php $cat_arr = category_filter_array(); ?>
             <ul>
                 <li>
-                    <a href="<?php echo esc_url($cat_arr['day-trips']['link']); ?>"><?php echo $cat_arr['day-trips']['title']; ?></a>
+                    <a href="#" class="category-filters compound" data-slug="category-day-trips"><?php echo $cat_arr['day-trips']['title']; ?></a>
                 </li>
                 <li>
-                    <a href="<?php echo esc_url($cat_arr['my-favourite-things']['link']); ?>"><?php echo $cat_arr['my-favourite-things']['title']; ?></a>
+                    <a href="#" class="category-filters compound" data-slug="category-my-favourite-things"><?php echo $cat_arr['my-favourite-things']['title']; ?></a>
                 </li>
                 <li>
-                    <a href="<?php echo esc_url($cat_arr['walking-tours']['link']); ?>"><?php echo $cat_arr['walking-tours']['title']; ?></a>
+                    <a href="#" class="category-filters compound" data-slug="category-walking-tours"><?php echo $cat_arr['walking-tours']['title']; ?></a>
                 </li>
                 <li>
-                    <a href="<?php echo get_permalink(get_page_by_path('this-week')); ?>">This Week</a>
+                    <a href="#" class="category-filters compound" data-slug="category-this-week">This Week</a>
                 </li>
-                <li class="all-cat">
-                    <a href="<?php echo home_url(); ?>">All</a>
+                <li class="selected">
+                    <a  class="category-filters single" href="#" data-slug="category-all">All</a>
                 </li>
             </ul>
         </div>
