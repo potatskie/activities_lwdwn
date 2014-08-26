@@ -894,10 +894,10 @@ html[xmlns] .slides {display: block;}
 .single #post .container #single-media-wrap{position: relative;}
 .single #post .container #single-media-wrap img {width: 100%;}
 .single #post .container #single-media-wrap .meta-overlay{position: absolute; bottom: 20px; text-align: left; padding-left: 50px;}
-.single #post .container #single-media-wrap .meta-overlay h1{font-size: 45px; line-height: 1.2em; margin: 0px; font-family: 'Stag Web';	font-weight: 700; font-style: normal; text-transform: none; }
+.single #post .container #single-media-wrap .meta-overlay h1{font-size: 45px; line-height: 1.2em; margin: 0px; font-family: 'Stag Web';	font-weight: 700; font-style: normal; text-transform: none; color: #FFFFFF;text-shadow: 0px 1px 2px rgba(0, 0, 0, 1); letter-spacing: 2px;}
 .single #post .container #single-media-wrap .meta-overlay span,
-.single #post .container #single-media-wrap .meta-overlay ul {display: inline-block; font-family: 'Oswald'; font-size: 20px;}
-.single #post .container #single-media-wrap .meta-overlay ul li a {color: #000000;}
+.single #post .container #single-media-wrap .meta-overlay ul {display: inline-block; font-family: 'Oswald'; font-size: 20px;color: #FFFFFF;text-shadow: 0px 1px 2px rgba(0, 0, 0, 1);}
+.single #post .container #single-media-wrap .meta-overlay ul li a {color: #FFFFFF;}
 .single #post .container .text-content-wrapper {padding: 20px 50px;}
 
 
