@@ -46,9 +46,15 @@ while (have_posts()) : the_post(); ?>
 			</header>
 			<div class="post-meta">
 				<?php wpex_post_meta(); ?>
-				<div class="hide-in-small">
+				<div class="hide-in-small clearfix">
 					<?php wpex_social_share(); ?>
+					<div class="related-venues clearfix">
+						<h3>Lwdwn Venues</h3>
+						<ul>
+						</ul>
+					</div>
 				</div>
+				
 			</div>
 			
 			<article class="entry clearfix">
@@ -59,10 +65,51 @@ while (have_posts()) : the_post(); ?>
 			
 			<div class="show-in-small clearfix">
 				<?php wpex_social_share(); ?>
+				<div class="related-venues clearfix">
+					<h3>Lwdwn Venues</h3>
+					<ul>
+					</ul>
+				</div>
 			</div>
 		</div>
 	<?php } ?>
-		
+	<?php if(simple_fields_value('venue_ids')): ?>
+	<script type="text/javascript">
+		jQuery(document).ready(function() {
+			var url = "http://localhost:3000/findvenue/<?php echo urlencode(simple_fields_value('venue_ids')); ?>";
+			jQuery.ajax({
+				type: 'GET',
+			    url: url,
+			    async: false,
+			    jsonpCallback: 'loadvenues',
+			    contentType: "application/json",
+			    dataType: 'jsonp',
+			    success: function(venues) {
+			    	if(venues.length > 0){
+			    		jQuery('.related-venues').show();
+			    		var venue_html = '';
+			    		jQuery.each(venues, function(i, current_venue){
+			    			venue_html += '<li>';
+			    			venue_html += '<a href="http://localhost:3000/venue/' + current_venue._id +'" target="_blank" class="image-link">';
+			    			venue_html += '<img src="http://lwdwn.com/images/venues/' + current_venue.image + '" alt="' + current_venue.name + '" />';
+			    			venue_html += '</a>';
+			    			venue_html += '<a href="http://localhost:3000/venue/' + current_venue._id +'" target="_blank" class="name-link">';
+			    			venue_html += '<span class="venue-name">' + current_venue.name + '</span>';
+			    			venue_html += '<span class="venue-address">' + current_venue.area.toUpperCase() + ', ' + current_venue.street + '</span>';
+			    			venue_html += '</li>';
+			    		});
+			    		jQuery('.related-venues ul').html(venue_html);
+				    	console.log(venue_html);
+			    	}
+
+			    },
+			    error: function(e) {
+			       console.log(e.message);
+			    }
+			});
+	    });
+	</script>
+	<?php endif; ?>
 	</div><!-- /container -->
 	<br />
     <?php related_posts(); ?>
