@@ -76,7 +76,7 @@ while (have_posts()) : the_post(); ?>
 	<?php if(simple_fields_value('venue_ids')): ?>
 	<script type="text/javascript">
 		jQuery(document).ready(function() {
-			var url = "http://localhost:3000/findvenue/<?php echo urlencode(simple_fields_value('venue_ids')); ?>";
+			var url = "http://www.lwdwn.com/findvenue/<?php echo urlencode(simple_fields_value('venue_ids')); ?>";
 			jQuery.ajax({
 				type: 'GET',
 			    url: url,
@@ -90,10 +90,10 @@ while (have_posts()) : the_post(); ?>
 			    		var venue_html = '';
 			    		jQuery.each(venues, function(i, current_venue){
 			    			venue_html += '<li>';
-			    			venue_html += '<a href="http://localhost:3000/venue/' + current_venue._id +'" target="_blank" class="image-link">';
+			    			venue_html += '<a href="http://www.lwdwn.com/venue/' + current_venue._id +'" target="_blank" class="image-link">';
 			    			venue_html += '<img src="http://lwdwn.com/images/venues/' + current_venue.image + '" alt="' + current_venue.name + '" />';
 			    			venue_html += '</a>';
-			    			venue_html += '<a href="http://localhost:3000/venue/' + current_venue._id +'" target="_blank" class="name-link">';
+			    			venue_html += '<a href="http://www.lwdwn.com/venue/' + current_venue._id +'" target="_blank" class="name-link">';
 			    			venue_html += '<span class="venue-name">' + current_venue.name + '</span>';
 			    			venue_html += '<span class="venue-address">' + current_venue.area.toUpperCase() + ', ' + current_venue.street + '</span>';
 			    			venue_html += '</li>';
