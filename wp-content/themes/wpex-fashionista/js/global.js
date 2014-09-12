@@ -116,6 +116,12 @@ current_filters = ['category-all'];
 			$container.isotope({filter: filter});
 		});
 
+		$('#search').keypress(function(e){
+			if(e.which == 13){
+				location.href="http://www.lwdwn.com/search/" + encodeURIComponent($(this).val());
+			}
+		});
+
 	});
 
 	$(window).load(function() {
