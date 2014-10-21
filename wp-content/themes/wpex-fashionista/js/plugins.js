@@ -370,12 +370,11 @@ j.start&&j.start(a)):void 0==a.data("flexslider")&&new d.flexslider(this,j)});va
 /*custom dropdownlist */
 ;(function( $, window, document, undefined ) {
 
-  var DropdownList = function( container ){
+  var DropdownList = function(container, ootions){
     this.$container = $(container);
     this.$list = $(container).find('.select');
-    this.$options = $(container).find('[data-value]');
-    this.$current = this.$list.find('li:first-child');
-    this.tempOptions = [];
+    this.$options = this.$list.find('li:not(:first-child)');
+    this.$current = this.$list.find('.current');
     this.init();
   };
 
@@ -384,13 +383,17 @@ j.start&&j.start(a)):void 0==a.data("flexslider")&&new d.flexslider(this,j)});va
     init: function(){
       var self = this;
 
-      self.$options.each(function(i, el){
+      self.setContainerHeight();
 
-        self.tempOptions.push(this);
+      self.$list.click(function(e){
+        self.expand();
+        e.stopPropagation();
+      })
+
+      self.$options.each(function(i, el){
 
         $(this).click(function(e){
           self.select($(this));
-          e.stopPropagation();
         });
 
       });
@@ -399,8 +402,6 @@ j.start&&j.start(a)):void 0==a.data("flexslider")&&new d.flexslider(this,j)});va
       $(document).click(function(){
         self.$list.removeClass('expanded');
       });
-
-      this.setContainerHeight();
     },
 
     select: function(selectedOption){
@@ -408,10 +409,8 @@ j.start&&j.start(a)):void 0==a.data("flexslider")&&new d.flexslider(this,j)});va
       var text = selectedOption.text();
       var value = selectedOption.data('value');
 
-      self.expand();
+      self.$current.empty().text(text);
       self.$current.attr('data-value', value);
-      self.$current.text(text);
-      self.$container.attr('data-value',value);
     },
 
     expand: function(){
@@ -423,17 +422,44 @@ j.start&&j.start(a)):void 0==a.data("flexslider")&&new d.flexslider(this,j)});va
       var self = this;
       var height = self.$list.outerHeight();
       this.$container.css({height:height});
+    },
+
+    value: function(value){
+      var self = this;
+
+      if(value){
+        self.select(self.$list.find('[data-value="'+ value +'"]').not('.current'));
+      }
+
+      return self.$current.attr('data-value');
     }
+
   };
 
-  $.fn.dropdownList = function(){
+  $.fn.dropdownList = function(options){
     var self = this;
 
-    return self.each(function(){
-      var dropdownList = new DropdownList( $(this) );
-      $.data(this, 'dropdownList', dropdownList);
+    if(options === undefined || typeof options === 'object'){
 
-    });
+      // create the instance if no parameters or an object parameter is passed
+      return self.each(function(){
+        var instance = new DropdownList($(this), options);
+        $.data(this, 'dropdownList', instance);
+      })
+
+    } else if (typeof options === 'string' && arguments[0] !== 'init'){
+
+      // call a plugin function if string parameter is passed
+      switch (arguments[0]) {
+
+        case "value":
+          return self.data('dropdownList').value(arguments[1]);
+
+        case "name":
+          return self.data('name');
+      }
+    }
+
   };
 
   // Example Usage:

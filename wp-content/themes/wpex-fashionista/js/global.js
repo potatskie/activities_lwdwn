@@ -116,13 +116,29 @@ current_filters = ['category-all'];
 			$container.isotope({filter: filter});
 		});
 
-		$('#search').keypress(function(e){
+		$('[role="dropdown-list"]').dropdownList();
+
+		$('.inpt-what-to-do input').keypress(function(e){
 			if(e.which == 13){
-				location.href="http://www.lwdwn.com/search/" + encodeURIComponent($(this).val());
+				lwdwnSearch();
 			}
 		});
+		$('.btn-search').click(function(e){
+			e.preventDefault();
+			lwdwnSearch();
+		});
 
-		$('[role="dropdown-list"]').dropdownList();
+		function lwdwnSearch(){
+			var txt = $('.inpt-what-to-do input').val().trim();
+			var venue = $('.drpdwn-venues').dropdownList('value'); 
+			var area = $('.drpdwn-areas').dropdownList('value');
+
+			var searchterm = '';
+			searchterm += (venue != 'all') ? '/venue/' + encodeURIComponent(venue) : '';
+			searchterm += (area != 'all') ? '/area/' + encodeURIComponent(area) : '';
+			searchterm += (txt) ? '/text/' + encodeURIComponent(txt) : '';
+			location.href="http://www.lwdwn.com/search" + searchterm;
+		}
 
 	});
 
