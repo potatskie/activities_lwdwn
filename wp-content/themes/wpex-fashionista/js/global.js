@@ -122,6 +122,8 @@ current_filters = ['category-all'];
 			}
 		});
 
+		$('[role="dropdown-list"]').dropdownList();
+
 	});
 
 	$(window).load(function() {

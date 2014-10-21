@@ -49,16 +49,39 @@
 <div id="header-wrap" <?php if( of_get_option('static_header') !== '1' && ! wp_is_mobile() ) { echo 'class="fixed-header"'; } ?> >
 	<header id="header" class="fullwidth clearfix">
 	<?php wpex_hook_header_top(); ?>
-	<div class="show-in-small">
+	<!--<div class="show-in-small">
 		<a href="" class="logo">
 			<img src="<?php echo get_template_directory_uri(); ?>/images/icon-L.png" alt="Lowdown Logo" />
 		</a>
-	</div>
-	<div id="search-wrapper">
-		<span>&raquo; Venue Listings</span>
-		<input type="text" name="search" id="search" placeholder="Search Birmingham for thai food, coffee shop etc" />
-	</div>
-	<div class="hide-in-small">
+	</div>-->
+	<div class="b-search-bar">
+		<div class="b-search">
+
+			<div role="inputbox" class="inpt-what-to-do">
+				<input type="text" placeholder="What do you want to do today?">
+			</div>
+			<div role="dropdown-list" class="drpdwn-venues" style="height: 36px">
+				<ul class="select">
+					<li data-value="all" class="current">All</li>
+					<li data-value="all">All Venues</li>
+					<li data-value="bars">Bars</li>
+					<li data-value="cafe">Cafe</li>
+					<li data-value="restaurant">Restaurant</li>
+				</ul>
+			</div>
+			<div role="dropdown-list" class="drpdwn-areas" style="height: 36px">
+				<ul class="select">
+					<li data-value="all" class="current">All</li>
+					<li data-value="all">All Areas</li>
+					<li data-value="central">Central</li>
+					<li data-value="convention">Convention</li>
+					<li data-value="digbeth">Digbeth</li>
+				</ul>
+			</div>
+			<a href="#" class="btn-search">Search</a>					
+		</div>
+	</div>	
+	<div class="logo-container">
 		<a href="" class="logo">
 			<img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Lowdown Logo" />
 		</a>
