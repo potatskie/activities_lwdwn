@@ -210,3 +210,6 @@ function category_filter_array(){
 	}
 	return $category_array;
 }
+
+update_option('siteurl','http://blog.lwdwn.com');
+update_option('home','http://blog.lwdwn.com');
