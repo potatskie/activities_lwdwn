@@ -385,23 +385,20 @@ j.start&&j.start(a)):void 0==a.data("flexslider")&&new d.flexslider(this,j)});va
 
       self.setContainerHeight();
 
-      self.$list.click(function(e){
+      self.$list.find('.current').click(function(e){
+        self.hideOthers();
         self.expand();
         e.stopPropagation();
-      })
+      });
 
-      self.$options.each(function(i, el){
-
+      self.$options.not('.current').each(function(i, el){
         $(this).click(function(e){
           self.select($(this));
+          self.expand();
+          e.stopPropagation();
         });
-
       });
 
-      // unexpand if user clicks outside the dropdown list
-      $(document).click(function(){
-        self.$list.removeClass('expanded');
-      });
     },
 
     select: function(selectedOption){
@@ -409,13 +406,22 @@ j.start&&j.start(a)):void 0==a.data("flexslider")&&new d.flexslider(this,j)});va
       var text = selectedOption.text();
       var value = selectedOption.data('value');
 
-      self.$current.empty().text(text);
+      self.$current.text(text);
       self.$current.attr('data-value', value);
     },
 
     expand: function(){
       var self = this;
-      self.$list.toggleClass('expanded');
+      self.$list.toggleClass('in-active-state');
+    },
+
+    hideOthers: function(){
+      var self = this;
+
+      // hide other dropdown list execept this one
+      $('.select.in-active-state').not(self.$list).each(function(){
+        $(this).removeClass('in-active-state');
+      });
     },
 
     setContainerHeight: function(){
@@ -427,10 +433,7 @@ j.start&&j.start(a)):void 0==a.data("flexslider")&&new d.flexslider(this,j)});va
     value: function(value){
       var self = this;
 
-      if(value){
-        self.select(self.$list.find('[data-value="'+ value +'"]').not('.current'));
-      }
-
+      if(value) self.select(self.$list.find('[data-value="'+ value +'"]').not('.current'));
       return self.$current.attr('data-value');
     }
 
@@ -466,4 +469,3 @@ j.start&&j.start(a)):void 0==a.data("flexslider")&&new d.flexslider(this,j)});va
   // $('[role="dropdown-list"]').dropdownList();
 
 }( jQuery, window, document ));
-

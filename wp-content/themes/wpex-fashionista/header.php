@@ -60,7 +60,7 @@
 			<div role="inputbox" class="inpt-what-to-do">
 				<input type="text" placeholder="What do you want to do today?">
 			</div>
-			<div role="dropdown-list" class="drpdwn-venues" style="height: 36px">
+			<div role="dropdown-list" class="drpdwn-venues" data-name="venues" style="height: 36px">
 				<ul class="select">
 					<li data-value="all" class="current">All</li>
 					<li data-value="all">All Venues</li>
@@ -69,7 +69,7 @@
 					<li data-value="restaurant">Restaurant</li>
 				</ul>
 			</div>
-			<div role="dropdown-list" class="drpdwn-areas" style="height: 36px">
+			<div role="dropdown-list" class="drpdwn-areas" data-name="areas" style="height: 36px">
 				<ul class="select">
 					<li data-value="all" class="current">All</li>
 					<li data-value="all">All Areas</li>
