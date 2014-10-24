@@ -1037,7 +1037,7 @@ button, [class^="btn-"], [class*=" btn-"] {
   right: 8px; }
 
 [role="dropdown-list"] .select.expanded {
-  z-index: 4; }
+  z-index: 9999; }
 
 [role="dropdown-list"] .select {
   list-style-type: none;
