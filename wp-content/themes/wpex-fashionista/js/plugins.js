@@ -469,3 +469,4 @@ j.start&&j.start(a)):void 0==a.data("flexslider")&&new d.flexslider(this,j)});va
   // $('[role="dropdown-list"]').dropdownList();
 
 }( jQuery, window, document ));
+

@@ -1008,7 +1008,7 @@ button, [class^="btn-"], [class*=" btn-"] {
 [role="dropdown-list"] .select {
   border: 1px solid #dedede; }
 
-[role="dropdown-list"] .select.expanded {
+[role="dropdown-list"] .select.in-active-state {
   -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
@@ -1018,7 +1018,7 @@ button, [class^="btn-"], [class*=" btn-"] {
   background: #f8f8f8;
   color: #444; }
 
-[role="dropdown-list"] .expanded li {
+[role="dropdown-list"] .in-active-state li {
   background: #fff;
   color: #222; }
 
@@ -1036,14 +1036,12 @@ button, [class^="btn-"], [class*=" btn-"] {
   border-width: 5px 4px 0 4px;
   right: 8px; }
 
-[role="dropdown-list"] .select.expanded {
-  z-index: 9999; }
-
 [role="dropdown-list"] .select {
   list-style-type: none;
-  width: 100%;
-  position: absolute;
-  z-index: 3; }
+  width: 100%; }
+
+[role="dropdown-list"] .select.in-active-state {
+  z-index: 9999; }
 
 [role="dropdown-list"] li {
   display: none;
@@ -1063,24 +1061,18 @@ button, [class^="btn-"], [class*=" btn-"] {
 
 [role="dropdown-list"] {
   position: relative; }
-  [role="dropdown-list"] .expanded li {
+  [role="dropdown-list"] .in-active-state li {
     display: block; }
 
 @media only screen {
 
-  .b-search {
-    width: 58.3333333333%;
-    float: left; }
-
-  .b-search .inpt-what-to-do, .b-search .drpdwn-venues, .b-search .drpdwn-areas, .b-search .btn-search {
+  .b-search, .b-search .inpt-what-to-do, .b-search .drpdwn-venues, .b-search .drpdwn-areas, .b-search .btn-search {
     width: 100%;
     float: left; }
 
  }
 
-
 @media only screen and (min-width:64.063em) {
-
 
   .b-search .drpdwn-venues, .b-search .drpdwn-areas, .b-search .btn-search {
     width: 16.6666666667%;
@@ -1088,6 +1080,11 @@ button, [class^="btn-"], [class*=" btn-"] {
 
   .b-search .inpt-what-to-do {
     width: 50%;
+    float: left; }
+
+
+  .b-search {
+    width: 58.3333333333%;
     float: left; }
 
  }
@@ -1125,8 +1122,8 @@ button:hover, [class^="btn-"]:hover, [class*=" btn-"]:hover, .b-404 .b-search .b
 .b-search .btn-search {
   background: #007aff;
   color: #fff;
-  border: 1px solid #0062cc;
-  height: 36px; }
+  border: 1px solid #0062cc; 
+  height:36px;}
 
 .b-search .btn-search:hover {
   background: #0062cc; }
@@ -1144,8 +1141,11 @@ button, [class^="btn-"], [class*=" btn-"] {
   display: table; }
 .b-search:after {
   clear: both; }
-.b-search .inpt-what-to-do {
-  color: red; }
+.b-search:before, .b-search:after {
+  content: " ";
+  display: table; }
+.b-search:after {
+  clear: both; }
 
 .logo-container{
 	position: absolute;
