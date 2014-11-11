@@ -13,12 +13,13 @@ if( of_get_option( 'sidebar_homepage_archive' ) == '1' ) echo '<div id="post" cl
     <div id="home-wrap" class="clearfix">
         <div class="category-filters-wrapper">
             <?php $cat_arr = category_filter_array(); ?>
+            <?php var_dump($cat_arr); ?>
             <ul>
                 <li>
                     <a href="#" class="category-filters compound" data-slug="category-day-trips"><?php echo $cat_arr['day-trips']['title']; ?></a>
                 </li>
                 <li>
-                    <a href="#" class="category-filters compound" data-slug="category-my-favourite-things"><?php echo $cat_arr['my-favourite-things']['title']; ?></a>
+                    <a href="#" class="category-filters compound" data-slug="category-my-favourite-things"><?php echo $cat_arr['24-hours']['title']; ?></a>
                 </li>
                 <li>
                     <a href="#" class="category-filters compound" data-slug="category-walking-tours"><?php echo $cat_arr['walking-tours']['title']; ?></a>
