@@ -200,7 +200,7 @@ if ( ! function_exists( 'wpex_embed_oembed_html' ) ) {
 add_filter( 'embed_oembed_html', 'wpex_embed_oembed_html', 99, 4 );
 
 function category_filter_array(){
-	$slugs_arr = array('day-trips', 'my-favourite-things', 'walking-tours');
+	$slugs_arr = array('day-trips', '24-hours', 'walking-tours');
 
 	$category_array = array();
 	foreach ($slugs_arr as $slug) {
