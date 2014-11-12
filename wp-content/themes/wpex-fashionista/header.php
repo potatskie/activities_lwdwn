@@ -47,14 +47,14 @@
 
 <?php wpex_hook_header_before(); ?>
 <div id="header-wrap" <?php if( of_get_option('static_header') !== '1' && ! wp_is_mobile() ) { echo 'class="fixed-header"'; } ?> >
-	<header id="header" class="fullwidth clearfix">
+	<header id="header" class="clearfix">
 	<?php wpex_hook_header_top(); ?>
 	<!--<div class="show-in-small">
 		<a href="" class="logo">
 			<img src="<?php echo get_template_directory_uri(); ?>/images/icon-L.png" alt="Lowdown Logo" />
 		</a>
 	</div>-->
-	<div class="b-search-bar">
+	<div class="b-top-bar">
 		<div class="b-search">
 
 			<div role="inputbox" class="inpt-what-to-do">
