@@ -38,16 +38,20 @@
 	<?php } //widgetized footer disabled ?>
 	<div id="footer-bottom">
 		<div class="outerbox clearfix">
-			<div id="copyright">
-				&copy; <?php _e('Copyright', 'wpex'); ?> <?php echo date('Y'); ?>
-			</div><!-- /copyright -->
-			<?php wp_nav_menu( array(
-				'container'			=> 'ul',
-				'menu_class'		=> 'footer-menu',
-				'theme_location'	=> 'footer_menu',
-				'sort_column'		=> 'menu_order',
-				'fallback_cb'		=> ''
-			)); ?>
+			<div class="footer-links footer-logo">
+				<a href="http://lwdwn.com/"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt=""></a>
+			</div>
+			<div class="footer-links footer-menu">
+				<a href="http://www.lwdwn.com">Venues</a>
+				<a href="http://www.lwdwn.com/events/all">Events</a>
+				<a href="mailto:admin@lwdwn.com">Contact</a>
+				<span>&copy; <span id="copyrighttext"><?php _e('Copyright', 'wpex'); ?> </span><?php echo date('Y'); ?></span>
+			</div>
+			<div class="footer-links footer-social">
+				<a class="fb" href="https://www.facebook.com/lwdwndwnlw">facebook</a>
+				<a class="twitter" href="https://twitter.com/lwdwndwnlw">twitter</a>
+				<a class="insta" href="http://instagram.com/lwdwn">instagram</a>
+			</div>
 		</div><!-- /outerbox -->
 	</div><!-- /footer-bottom -->
 	<?php wpex_hook_footer_bottom(); ?>

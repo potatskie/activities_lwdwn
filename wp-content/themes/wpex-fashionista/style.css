@@ -504,16 +504,15 @@ ul.sf-menu li li:hover ul, ul.sf-menu li li.sfHover ul { left: 190px; top: 0px }
 /*footer bottom*/
 #footer-bottom{ background: #000; font-size: 11px; font-weight: bold; }
 #footer-bottom .outerbox { position: relative; padding: 20px 0; }
-#footer-bottom a { color: #999; }
-#footer-bottom a:hover { color: #fff; }
+
 #copyright { font-size: 11px; }
 
 /*footer menu*/
 #copyright{ float: left; width: 50%; }
-.footer-menu{ float: right; width: 50%; text-align: right; }
+/*.footer-menu{ float: right; width: 50%; text-align: right; }
 .footer-menu li{ display: inline; margin: 0; font-weight: normal }
-.footer-menu a{ display: inline; font-size: 11px; display: inline; padding-right: 10px; margin-right: 5px;  background: url("images/footer-menu-divider.png") no-repeat center right }
-.footer-menu li:last-child a{ margin: 0; padding: 0; background: none }
+
+.footer-menu li:last-child a{ margin: 0; padding: 0; background: none }*/
 
 /*back to top*/
 #toplink{ display: none; position: fixed; bottom: 20px; right: 20px; width: 30px; height: 30px; line-height: 28px; text-align: center; background: #333; color: #fff; font-size: 18px; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; opacity: 0.8; -moz-opacity: 0.8; -webkit-opacity: 0.8; }
@@ -1301,6 +1300,99 @@ button, [class^=btn-], [class*=" btn-"] {
 }
 
 /*aldren end*/
+.footer-links{
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
+  float: left;
+}
 
+.footer-logo{
+  width: 28%;
+}
 
+.footer-social{
+   width: 22%;
+}
 
+.footer-menu{
+  width: 49.5%;
+  text-align: center;
+}
+
+.footer-menu a,
+.footer-menu span{
+  display: inline;
+  font-weight: 700;
+  padding-right: 8px;
+  margin-right: 5px;
+  font-family: Georgia;
+  font-size: 20px;
+  color: #FFF;
+}
+
+.footer-social{
+  text-align: right;
+}
+
+.footer-social a{
+  text-indent: 40px;
+  display: inline-block;
+  width: 33px;
+  height: 33px;
+  margin-right: 12px;
+  background-repeat: none;
+  overflow: hidden;
+}
+
+.footer-social .fb{
+  background-image: url('images/fb-icon.png');
+}
+
+.footer-social .fb:hover{
+  background-image: url('images/fb-icon-hover.png');
+}
+
+.footer-social .twitter{
+  background-image: url('images/twitter-icon.png');
+}
+
+.footer-social .twitter:hover{
+  background-image: url('images/twitter-icon-hover.png');
+}
+
+.footer-social .insta{
+  background-image: url('images/insta-icon.png');
+}
+
+.footer-social .insta:hover{
+  background-image: url('images/insta-icon-hover.png');
+}
+
+#footer-bottom a:hover {
+  color: #999;
+}
+
+@media screen and (min-width: 768px) and (max-width: 960px){
+  #copyrighttext{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .footer-links{
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-social{
+    padding-top: 7px;
+  }
+}
+
+@media screen and (max-width: 479px){
+  .footer-menu > span{
+    display: block;
+  }
+}
