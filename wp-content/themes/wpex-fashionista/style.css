@@ -136,8 +136,8 @@ address{letter-spacing: 1px; margin: 20px 0 }
 /* Body & Main
 ================================================== */
 body { /*background: #ddd; background-image: url("images/mainbg.png"); background-repeat: repeat;*/ nowhitespace: afterproperty; font: 13px/1.7 Georgia, serif; color: #777; }
-body a { color: #ed4555 } /*main link color*/
-body a:hover { text-decoration: none; color: #ed4555 }
+body a { color: #007AFF; } /*main link color*/
+body a:hover { text-decoration: none; color: #007AFF; }
 
 /*main containers*/
 #main-content{ padding: 20px 0; }
@@ -941,7 +941,7 @@ html[xmlns] .slides {display: block;}
 .post-meta .meta-single-date,
 .post-meta .meta-single-cat{ font-family: 'Oswald'; color: #000000; font-weight: 700;}
 .post-meta .meta-single-cat a {color: #000000;}
-.post-meta .meta-single-user {font-weight: 700; margin-top: 12px; color: #ed4555; font-style: italic;}
+.post-meta .meta-single-user {font-weight: 700; margin-top: 12px; color: #007AFF; font-style: italic;}
 .related-venues {display: none; width: 90%; margin-top: 15px; border-top: 1px solid #AAA;}
 .related-venues h3 {font-family: 'Oswald'; margin: 15px 0px;}
 .related-venues li {margin-top: 20px;}
