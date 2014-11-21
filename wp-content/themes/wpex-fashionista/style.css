@@ -1323,11 +1323,11 @@ button, [class^=btn-], [class*=" btn-"] {
 .footer-menu a,
 .footer-menu span{
   display: inline;
-  font-weight: 700;
+  font-weight: 300;
   padding-right: 8px;
   margin-right: 5px;
   font-family: Georgia;
-  font-size: 20px;
+  font-size: 14px;
   color: #FFF;
 }
 
@@ -1386,8 +1386,9 @@ button, [class^=btn-], [class*=" btn-"] {
     text-align: center;
   }
 
-  .footer-social{
-    padding-top: 7px;
+  .footer-social,
+  .footer-menu{
+    padding-top: 13px;
   }
 }
 
