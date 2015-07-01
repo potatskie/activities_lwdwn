@@ -17,48 +17,20 @@ $social_links       = blink_get_social_links();
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="inner-block">
-			<?php if ( blink_has_footer_widgets() ) : ?>
-			<div class="widgets-container">
-				<?php get_sidebar( 'footer-1' ); ?>
-				<?php get_sidebar( 'footer-2' ); ?>
+			<div class="footer-links footer-logo">
+				<a href="http://lwdwn.com/"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt=""></a>
 			</div>
-			<?php endif; ?>
-
-			<div class="footer-text-container">
-				<div class="footer-text">
-					<?php // Footer text
-					if ( $footer_text ) : ?>
-					<p><?php echo blink_sanitize_text( $footer_text ); ?></p>
-					<?php endif; ?>
-
-					<?php // Theme credit text
-					if ( false === $hide_footer_credit ) : ?>
-					<p class="site-info">
-						<?php if ( blink_is_wpcom() ) : ?>
-							<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'blink' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'blink' ), 'WordPress' ); ?></a>
-							<span class="sep"> | </span>
-							<?php printf( __( 'Theme: %1$s by %2$s.', 'blink' ), 'Blink', '<a href="https://codestag.com/" rel="designer">Codestag</a>' ); ?>
-						<?php else : ?>
-							<a title="<?php esc_attr_e( 'Theme info', 'blink' ); ?>" href="https://codestag.com/themes/blink/"><?php printf( __( '%s theme', 'blink' ), 'Blink' ); ?></a> <em class="by"><?php _ex( 'by', 'attribution', 'blink' ); ?></em> <a title="<?php esc_attr_e( 'Codestag homepage', 'blink' ); ?>" href="https://codestag.com/">Codestag</a>
-						<?php endif; ?>
-					</p><!-- .site-info -->
-					<?php endif; ?>
-				</div>
-
-				<?php // Social profile links
-				if ( ! empty( $social_links ) ) : ?>
-				<ul class="footer-social-links">
-					<?php foreach ( $social_links as $service => $details ) : ?>
-					<li class="<?php echo esc_attr( $service ); ?>">
-						<a href="<?php echo esc_url( $details['url'] ); ?>" title="<?php echo esc_attr( $details['title'] ); ?>">
-							<span class="genericon genericon-<?php echo esc_attr( $details['class'] ); ?>"></span>
-						</a>
-					</li>
-					<?php endforeach; ?>
-				</ul>
-				<?php endif; ?>
+			<div class="footer-links footer-menu">
+				<a href="http://www.lwdwn.com">Venues</a>
+				<a href="http://www.lwdwn.com/events/all">Events</a>
+				<a href="mailto:admin@lwdwn.com">Contact</a>
+				<span>&copy; <span id="copyrighttext"><?php _e('Copyright', 'wpex'); ?> </span><?php echo date('Y'); ?></span>
 			</div>
-
+			<div class="footer-links footer-social">
+				<a class="fb" href="https://www.facebook.com/lwdwndwnlw">facebook</a>
+				<a class="twitter" href="https://twitter.com/lwdwndwnlw">twitter</a>
+				<a class="insta" href="http://instagram.com/lwdwn">instagram</a>
+			</div>
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->

@@ -274,8 +274,11 @@ function blink_scripts() {
 	// Main stylesheet
 	wp_enqueue_style( 'blink-style', get_stylesheet_uri(), $style_dependencies, BLINK_VERSION, 'screen' );
 
+	//dropdown plugin script
+	wp_enqueue_script( 'dropdown-plugin', get_template_directory_uri() . '/js/dropdown.js', $script_dependencies, '1.0', true );
+
 	// Frontend script
-	wp_enqueue_script( 'blink-frontend', get_template_directory_uri() . '/js/frontend' . BLINK_SUFFIX . '.js', $script_dependencies, BLINK_VERSION, true );
+	wp_enqueue_script( 'blink-frontend', get_template_directory_uri() . '/js/frontend.js', $script_dependencies, BLINK_VERSION, true );
 
 	// FitVids
 	wp_enqueue_script( 'blink-fitvids', get_template_directory_uri() . '/js/lib/fitvids/jquery.fitvids' . BLINK_SUFFIX . '.js', array( 'jquery' ), '1.1', true );

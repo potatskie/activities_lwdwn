@@ -112,4 +112,30 @@
 	};
 
 	Blink.init();
+
+
+	$('[role="dropdown-list"]').dropdownList();
+
+	$('.inpt-what-to-do input').keypress(function(e){
+		if(e.which == 13){
+			lwdwnSearch();
+		}
+	});
+	$('.btn-search').click(function(e){
+		e.preventDefault();
+		lwdwnSearch();
+	});
+
+	function lwdwnSearch(){
+		var txt = $('.inpt-what-to-do input').val().trim();
+		var venue = $('.drpdwn-venues').dropdownList('value'); 
+		var area = $('.drpdwn-areas').dropdownList('value');
+
+		var searchterm = '';
+		searchterm += (venue != 'all') ? '/venue/' + encodeURIComponent(venue) : '';
+		searchterm += (area != 'all') ? '/area/' + encodeURIComponent(area) : '';
+		searchterm += (txt) ? '/text/' + encodeURIComponent(txt) : '';
+		location.href="http://www.lwdwn.com/search" + searchterm;
+	}
+	
 } )( jQuery );
