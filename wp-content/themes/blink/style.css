@@ -2381,6 +2381,12 @@ object {
 	text-transform: uppercase;
 }
 
+.yarpp-related {overflow: hidden; padding: 50px 0px 0px 0px;}
+.yarpp-related h3 {text-transform: uppercase; font-family: 'Oswald';}
+.yarpp-related ul {margin-top: 20px;}
+.yarpp-related ul li {width: 300px; margin: 0px 15px 15px 0px; display: inline-block; vertical-align: top;}
+.yarpp-related ul li h6{margin: 7px 0px; font-size: 20px; line-height: 26px;font-family: 'Stag Web'; font-weight: 700; font-style: normal; font-stretch: normal;}
+
 /*aldren start*/
 
 #header-wrap{
