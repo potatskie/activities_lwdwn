@@ -18,7 +18,7 @@ header('Content-Type: text/css');
 	*display: inline;
 }
 .yarpp-thumbnails-horizontal .yarpp-thumbnail {
-	border: 1px solid rgba(127,127,127,0.1);
+	/*border: 1px solid rgba(127,127,127,0.5);*/
 	width: <?php echo $width_with_margins; ?>px;
 	height: <?php echo $height_with_text; ?>px;
 	margin: <?php echo $margin; ?>px;
@@ -34,14 +34,13 @@ header('Content-Type: text/css');
 	display: block;
 }
 .yarpp-thumbnails-horizontal .yarpp-thumbnail-title {
-	font-size: 1em;
-	max-height: 2.8em;
-	line-height: 1.4em;
+	font-size: 10;
 	margin: <?php echo $extra_margin; ?>px;
 	margin-top: 0px;
 	width: <?php echo $width; ?>px;
 	text-decoration: inherit;
 	overflow: hidden;
+	color:#000;
 }
 
 .yarpp-thumbnail-default {

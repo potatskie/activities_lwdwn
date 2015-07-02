@@ -9,15 +9,15 @@
 
 .yarpp-related .yarpp-thumbnail-title{
     text-align: left;
-    font-weight: bold;
-    font-size: 96%;
+    font-weight: 400;
+    font-size: 10px;
     text-decoration: none;
 }
 
 .yarpp-related h3{
-    font-weight: bold;
+    font-weight: 700;
     padding: 0 0 5px 0;
-    font-size: 125%;
+    font-size: 20px;
     text-transform: capitalize;
     margin: 0;
 }
