@@ -77,6 +77,7 @@ function blink_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'blink' ),
+		'footer' => __( 'Footer Menu', 'blink' ),
 	) );
 
 	/**
@@ -273,6 +274,12 @@ function blink_scripts() {
 
 	// Main stylesheet
 	wp_enqueue_style( 'blink-style', get_stylesheet_uri(), $style_dependencies, BLINK_VERSION, 'screen' );
+
+	if(is_page_template('splash-template.php')){
+		wp_enqueue_style('splash-page-style', get_template_directory_uri() . '/css/splash.css', '', '1.0');
+		wp_enqueue_style('animate-css', get_template_directory_uri() . '/css/animate.css', '', '1.0');
+		wp_enqueue_script( 'waypoints', get_template_directory_uri() . '/js/jquery.waypoints.min.js', $script_dependencies, '1.0', true );
+	}
 
 	//dropdown plugin script
 	wp_enqueue_script( 'dropdown-plugin', get_template_directory_uri() . '/js/dropdown.js', $script_dependencies, '1.0', true );

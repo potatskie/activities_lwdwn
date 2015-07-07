@@ -157,6 +157,21 @@
 		}
 	});
 
+	$('#little-place').waypoint(function(direction){
+		$('#little-place .leftside').addClass('animated fadeIn fadeInRight');
+		$('#little-place .rightside').addClass('animated fadeIn fadeInLeft');
+	},{
+		triggerOnce: true,
+        offset: '50%'
+	});
+
+	$('#for-the-road').waypoint(function(direction){
+		$('#for-the-road .leftside').addClass('animated fadeInRight');
+		$('#for-the-road .rightside').addClass('animated fadeInLeft');
+	},{
+		triggerOnce: true,
+        offset: '50%'
+	});
 	
 } )( jQuery );
 
