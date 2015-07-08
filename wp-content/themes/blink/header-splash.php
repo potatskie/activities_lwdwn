@@ -26,7 +26,7 @@
 			<button id="menu-toggle" class="menu-toggle">
 				<span class="genericon genericon-menu"></span>
 			</button>
-			<div class="logo-container">
+			<div class="splash-logo-container">
 				<a href="" class="logo">
 					<img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Lowdown Logo" />
 				</a>

@@ -76,12 +76,19 @@ body{
 	max-width: 100%;
 	padding-left: 0px;
 	padding-right: 0px;
+	background-color: rgba(0,0,0, 0.5);
 }
 
 .menu-toggle {
 	display: block;
 	float: left;
 	margin-left: 25px;
+	top: 0px;
+	color: #fff;
+}
+
+.menu-toggle:hover {
+	color: #fff;
 }
 
 .pushed .menu-toggle {
@@ -99,6 +106,13 @@ body{
 
 .pushed .menu-toggle .genericon{
 	font-weight: 400;
+}
+
+.splash-logo-container {
+	position: absolute;
+	top: 5px;
+	right: 20px;
+	z-index: 20;
 }
 
 .main-navigation {
@@ -130,6 +144,7 @@ body{
   -moz-backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  font-family: "Raleway Regular", sans-serif;
 }
 
 .main-navigation.toggled-on {
@@ -365,6 +380,8 @@ div.primary-menu > ul > li:hover > a:before,
 
 .page-template-splash-template .footer-top .footer-social a{
 	vertical-align: top;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 
 .page-template-splash-template .footer-bottom{
