@@ -20,7 +20,6 @@ header('Content-Type: text/css');
 .yarpp-thumbnails-horizontal .yarpp-thumbnail {
 	/*border: 1px solid rgba(127,127,127,0.5);*/
 	width: <?php echo $width_with_margins; ?>px;
-	height: <?php echo $height_with_text; ?>px;
 	margin: <?php echo $margin; ?>px;
 	margin-left: 0px;
 	vertical-align: top;
