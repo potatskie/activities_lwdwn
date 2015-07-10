@@ -17,19 +17,16 @@ $social_links       = blink_get_social_links();
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="inner-block">
-			<div class="footer-links footer-logo">
-				<a href="http://lwdwn.com/"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt=""></a>
+			<div class="footer-top">
+				<?php wp_nav_menu( array( 'theme_location' => 'footer', 'container' => false, 'menu_class' => 'footer-menu' ) ); ?>
+				<div class="footer-links footer-social">
+					<a class="fb" href="https://www.facebook.com/lwdwndwnlw"><i class="fa fa-facebook"></i></a>
+					<a class="twitter" href="https://twitter.com/lwdwndwnlw"><i class="fa fa-twitter"></i></a>
+					<a class="insta" href="http://instagram.com/lwdwn"><i class="fa fa-instagram"></i></a>
+				</div>
 			</div>
-			<div class="footer-links footer-menu">
-				<a href="http://www.lwdwn.com">Venues</a>
-				<a href="http://www.lwdwn.com/events/all">Events</a>
-				<a href="mailto:admin@lwdwn.com">Contact</a>
-				<span>&copy; <span id="copyrighttext"><?php _e('Copyright', 'wpex'); ?> </span><?php echo date('Y'); ?></span>
-			</div>
-			<div class="footer-links footer-social">
-				<a class="fb" href="https://www.facebook.com/lwdwndwnlw">facebook</a>
-				<a class="twitter" href="https://twitter.com/lwdwndwnlw">twitter</a>
-				<a class="insta" href="http://instagram.com/lwdwn">instagram</a>
+			<div class="footer-bottom">
+				<span>&copy; <span id="copyrighttext"><?php _e('Copyright', 'wpex'); ?> </span><?php echo date('Y'); ?> Lowdown. All Rights Reserved</span>
 			</div>
 		</div>
 	</footer><!-- #colophon -->

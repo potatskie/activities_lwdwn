@@ -278,8 +278,10 @@ function blink_scripts() {
 	if(is_page_template('splash-template.php')){
 		wp_enqueue_style('splash-page-style', get_template_directory_uri() . '/css/splash.css', '', '1.0');
 		wp_enqueue_style('animate-css', get_template_directory_uri() . '/css/animate.css', '', '1.0');
-		wp_enqueue_script( 'waypoints', get_template_directory_uri() . '/js/jquery.waypoints.min.js', $script_dependencies, '1.0', true );
+		
 	}
+
+	wp_enqueue_script( 'waypoints', get_template_directory_uri() . '/js/jquery.waypoints.min.js', $script_dependencies, '1.0', true );
 
 	//dropdown plugin script
 	wp_enqueue_script( 'dropdown-plugin', get_template_directory_uri() . '/js/dropdown.js', $script_dependencies, '1.0', true );

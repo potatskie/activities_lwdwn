@@ -25,9 +25,13 @@ header('Content-Type: text/css');
 	margin-left: 0px;
 	vertical-align: top;
 }
-.yarpp-thumbnail > img, .yarpp-thumbnail-default {
+.yarpp-thumbnail-default {
 	width: <?php echo $width; ?>px;
 	height: <?php echo $height; ?>px;
+	margin: <?php echo $margin; ?>px;
+}
+
+.yarpp-thumbnail > img {
 	margin: <?php echo $margin; ?>px;
 }
 .yarpp-thumbnails-horizontal .yarpp-thumbnail > img, .yarpp-thumbnails-horizontal .yarpp-thumbnail-default {

@@ -3,7 +3,7 @@
 Template Name: Splash Template
 */
 
-get_header('splash'); ?>
+get_header(); ?>
 
 
 	<div id="primary" class="content-area">
@@ -73,4 +73,4 @@ get_header('splash'); ?>
 		})(jQuery);
 	</script>
 
-<?php get_footer('splash'); ?>
+<?php get_footer(); ?>
