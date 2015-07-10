@@ -17,7 +17,7 @@
 			<footer class="entry-footer">
 				<?php blink_posted_on(); ?>
 
-				<?php blink_entry_footer(); ?>
+				<?php //blink_entry_footer(); ?>
 			</footer><!-- .entry-footer -->
 		</div><!-- .text-container -->
 	</div><!-- .post-cover-inside -->
