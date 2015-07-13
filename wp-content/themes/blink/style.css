@@ -2566,7 +2566,7 @@ footer .inner-block{
 	z-index: 55;
 }
 
-.inner-block{
+#masthead .inner-block{
 	max-width: 100%;
 	padding-left: 0px;
 	padding-right: 0px;
@@ -2882,6 +2882,10 @@ footer#colophon{
 	display: block;
 	text-align: center;
 	padding: 30px 0px;
+}
+
+.page-cover .entry-title{
+	text-align: center;
 }
 
 @media only screen and (max-width:600px) {
