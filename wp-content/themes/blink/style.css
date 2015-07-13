@@ -2842,6 +2842,12 @@ footer#colophon{
 
 }
 
+footer#colophon .inner-block{
+	max-width: 100%;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
 .footer-top{
 	background-color: #289DFD;
 	text-align: center;
